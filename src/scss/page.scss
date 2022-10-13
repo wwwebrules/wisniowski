@@ -1,0 +1,51 @@
+/*body ==================*/
+body {
+    font: normal normal var(--font-weight-base) var(--font-size-base) var(--font-family-base);
+    line-height: var(--line-height-base);
+    color: var(--color-text-base);
+    letter-spacing: var(--letter-spacing-base);
+    margin: 0;
+    scroll-behavior: smooth;
+    &.lock {
+        overflow: hidden;
+    }
+    //&.loaded {
+    //    opacity: 1;
+    //}
+}
+
+/*body END ==============*/
+
+/*wrapper ==================*/
+.wrapper {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    // Фикс для слайдеров
+    > * {
+        min-width: 0;
+    }
+}
+/*wrapper END ==============*/
+
+/*container ==================*/
+.container {
+    display: block;
+    width: 100%;
+    max-width: var(--max-width-container);
+    margin: 0 auto;
+    padding: 0 var(--padding-security);
+    @media only screen and (min-width:$mdCnt){
+        padding: 0;
+    }
+}
+/*container END ==============*/
+
+/*page ==================*/
+.page {
+}
+/*page END ==============*/
+
+
+

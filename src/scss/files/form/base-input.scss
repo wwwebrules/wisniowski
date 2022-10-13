@@ -1,0 +1,14 @@
+input.base-input, select.base-input{
+    padding: 0 var(--padding-security);
+    font: inherit;
+    letter-spacing: inherit;
+    line-height: var(--line-height-base);
+    color: var(--color-text-base);
+}
+select.base-input{
+    cursor: pointer;
+
+}
+input.base-input{
+    cursor: text;
+}

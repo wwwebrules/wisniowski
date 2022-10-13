@@ -1,0 +1,44 @@
+/*menu-icon ==================*/
+.menu-icon {
+    position: relative;
+    width: 35px;
+    cursor: pointer;
+    z-index: 5;
+    @media only screen and (min-width: $mdDesc1) {
+        display: none;
+    }
+
+    span {
+        border-radius: 1px;
+        background-color: var(--color-f);
+        height: 3px;
+        display: block;
+    }
+
+    span:nth-child(1) {
+        width: 33.3333%;
+        transition: width .15s ease;
+        margin-bottom: 5px;
+    }
+
+    span:nth-child(2) {
+        margin-bottom: 5px;
+    }
+
+    span:nth-child(3) {
+        width: 66.6666%;
+        transition: width .3s ease;
+    }
+
+    &.active {
+        span:nth-child(1) {
+            width: 100%;
+        }
+
+        span:nth-child(3) {
+            width: 100%;
+        }
+    }
+}
+
+/*menu-icon END ==============*/

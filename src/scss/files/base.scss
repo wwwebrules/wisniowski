@@ -1,0 +1,80 @@
+/*hidden ==================*/
+*[hidden]{
+    display: none !important;
+}
+/*hidden END ==================*/
+
+
+/*icon-svg ==================*/
+.icon-svg {
+    fill: currentColor;
+}
+/*icon-svg END ==============*/
+
+/*ibg ==================*/
+.ibg {
+    position: relative;
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+}
+
+.ibg_contain {
+    img {
+        object-fit: contain;
+    }
+}
+
+.ibg_resp {
+    padding-bottom: 56.25%;
+}
+/*ibg END ==============*/
+
+/*vgb ==================*/
+.vbg {
+    position: relative;
+    overflow: hidden;
+    video,
+    iframe,
+    object,
+    embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.vbg_resp {
+    padding-bottom: 56.25%;
+}
+
+/*vgb END ==============*/
+
+.content-block {
+    > *:first-child {
+        margin-top: 0 !important;
+    }
+
+    > *:last-child {
+        margin-bottom: 0 !important;
+
+    }
+    ul {
+        margin: var(--padding-security) 0;
+        padding-left: 17px;
+    }
+    p{
+        margin: var(--padding-security) 0;
+    }
+    h1,h2,h3,h4,h5,h6{
+        margin: var(--padding-security) 0;
+    }
+}

@@ -1,0 +1,10 @@
+package-lock.json
+flsStartTemplate/
+node_modules/
+dist/
+.idea/
+Source/
+version.json
+undefined
+**/*.zip
+**/*.rar
