@@ -1,6 +1,6 @@
 /*body ==================*/
 body {
-    font: normal normal var(--font-weight-base) var(--font-size-base) var(--font-family-base);
+    font: normal normal var(--font-weight-base) var(--font-size-s) var(--font-family-base);
     line-height: var(--line-height-base);
     color: var(--color-text-base);
     letter-spacing: var(--letter-spacing-base);
@@ -12,6 +12,12 @@ body {
     //&.loaded {
     //    opacity: 1;
     //}
+    @media only screen and (min-width:$mdTablet2){
+        font-size: var(--font-size-m);
+    }
+    @media only screen and (min-width:$mdDesc1){
+        font-size: var(--font-size-l);
+    }
 }
 
 /*body END ==============*/
@@ -20,8 +26,11 @@ body {
 .wrapper {
     min-height: 100vh;
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows:  auto 1fr auto;
+    &.width-marquee{
+        grid-template-rows: auto auto 1fr auto;
 
+    }
     // Фикс для слайдеров
     > * {
         min-width: 0;

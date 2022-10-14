@@ -1,44 +1,208 @@
-/*menu-icon ==================*/
-.menu-icon {
-    position: relative;
-    width: 35px;
-    cursor: pointer;
-    z-index: 5;
-    @media only screen and (min-width: $mdDesc1) {
-        display: none;
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: var(--color-f);
+    min-height: var(--header-height-m);
+    display: flex;
+    align-items: center;
+    transition: background-color var(--transition-duration-base) var(--transition-function-base);
+   @media only screen and (min-width:$mdTablet2){
+       min-height: var(--header-height-t);
+   }
+    @media only screen and (min-width:$mdDesc1){
+        min-height: var(--header-height-d);
+    }
+    &.scrolled{
+        background-color: var(--color-sub-accent);
+    }
+    // .header__container
+    &__container {
     }
 
-    span {
-        border-radius: 1px;
-        background-color: var(--color-f);
-        height: 3px;
-        display: block;
-    }
-
-    span:nth-child(1) {
-        width: 33.3333%;
-        transition: width .15s ease;
-        margin-bottom: 5px;
-    }
-
-    span:nth-child(2) {
-        margin-bottom: 5px;
-    }
-
-    span:nth-child(3) {
-        width: 66.6666%;
-        transition: width .3s ease;
-    }
-
-    &.active {
-        span:nth-child(1) {
-            width: 100%;
+    // .header__body
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media only screen and (min-width: $mdDesc1) {
+            justify-content: start;
         }
+    }
 
-        span:nth-child(3) {
-            width: 100%;
+    // .header__logo
+    &__logo {
+        @media only screen and (min-width: $mdDesc1) {
+            margin-right: auto;
+        }
+        @media only screen and (max-width: $mdTablet2) {
+            overflow: hidden;
+            width: 192px;
+            height: 40px;
+            transition: height var(--transition-duration-base) var(--transition-function-base),
+            width var(--transition-duration-base) var(--transition-function-base);
+            .scrolled & {
+                width: 45px;
+                height: 23px;
+            }
+            img {
+                width: 192px;
+                height: 40px;
+                max-width: none;
+            }
+        }
+        @media only screen and (min-width:$mdDesc1){
+            img{
+                width: 239px;
+                height: 49px;
+            }
+        }
+    }
+
+    // .header__icon
+    &__icon {
+        @media only screen and (min-width: $mdTablet2) {
+            display: none ;
+        }
+    }
+
+    // .header__button-transparent
+    &__button-transparent {
+        @media only screen and (max-width: $mdTablet2) {
+            overflow: hidden;
+            opacity: 0;
+            transition: opacity var(--transition-duration-base) var(--transition-function-base);
+            width: 0px;
+            .scrolled & {
+                opacity: 1;
+                width: auto;
+            }
+        }
+    }
+
+    // .header__button-accent
+    &__button-accent {
+        @media only screen and (max-width: $mdTablet2) {
+            display: none;
+        }
+        @media only screen and (min-width: $mdDesc1) {
+            margin-left: 40px;
+        }
+    }
+
+}
+
+.marquee-header {
+    display: block;
+    background-color: var(--color-yellow);
+    // .marquee-header__body
+    &__body {
+        display: flex;
+        min-height: 30px;
+        align-items: center;
+        @media only screen and (min-width: $mdTablet2) {
+            min-height: 40px;
+        }
+    }
+
+    // .marquee-header__item
+    &__item {
+        display: flex;
+        align-items: center;
+
+        & + & {
+            margin-left: 20px;
+        }
+    }
+
+    // .marquee-header__flag
+    &__flag {
+        margin-right: 20px;
+
+        img {
+            max-width: none;
+            height: 12px;
+            width: 16px;
+            object-fit: contain;
+        }
+    }
+
+    // .marquee-header__text
+    &__text {
+        font-size: 10px;
+        font-family: var(--font-family-inter);
+        font-weight: 700;
+        line-height: math.div(12, 10);
+        color: var(--color-blue);
+        letter-spacing: normal;
+        @media only screen and (min-width: $mdTablet2) {
+            font-size: 12px;
         }
     }
 }
 
-/*menu-icon END ==============*/
+.icon-header {
+    --size: 42px;
+    --size-icon: 18px;
+   @media only screen and (max-width:$mdTablet2){
+       min-width: var(--size);
+       min-height: var(--size);
+       display: flex ;
+       justify-content: center;
+       align-items: center;
+       border-radius: 50%;
+       border: 1px solid var(--color-gray);
+
+       // .icon-header__phone
+       &__phone {
+           width: var(--size-icon);
+           height: var(--size-icon);
+       }
+   }
+}
+
+.button-transparent {
+    font-size: 12px;
+    line-height: math.div(14, 12);
+    font-weight: 550;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    border-bottom: 1px solid var(--color-gray-2);
+    transition: border-bottom-color var(--transition-duration-base) var(--transition-function-base);
+    @media only screen and (min-width:$mdTablet2){
+        padding: 8px 2px;
+    }
+    @media only screen and (min-width:$mdTablet2) and (any-hover: hover){
+        &:hover{
+            border-bottom-color: var(--color-accent);
+        }
+    }
+    
+}
+
+.button-assent {
+    padding: 16px 46px;
+    font-weight: 550;
+    font-size: 12px;
+    line-height: math.div(14, 12);
+    color: var(--color-f);
+    text-transform: uppercase;
+    letter-spacing: normal;
+    background-color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+    transition: background-color var(--transition-duration-base) var(--transition-function-base),
+    color var(--transition-duration-base) var(--transition-function-base)
+;
+    @media (any-hover: hover){
+    	&:hover{
+    		background-color: var(--color-f);
+            color: var(--color-accent);
+    	}
+    }
+    &:active{
+        background-color: var(--color-sub-accent);
+    }
+}
+
+
+

@@ -43,3 +43,9 @@ import {scrollAnimation} from "./animations.js";
 scrollAnimation()
 /*animation END ==================*/
 
+
+/* header ================== */
+    import {scrolled} from "./header.js";
+    scrolled()
+/* header END ============== */
+

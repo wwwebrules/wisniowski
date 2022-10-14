@@ -4,21 +4,27 @@ html:root {
 
 /*vars END ==============*/
 /*config ==================*/
-$max-width-container: 1280;
-$padding-security: 15;
+$max-width-container: 1160;
+$padding-security: 10;
 html:root {
     --max-width-container: #{$max-width-container+ px};
+    --header-height-m:60px;
+    --header-height-t:80px;
+    --header-height-d:93px;
 }
 /*config END ==============*/
 
 /*font ==================*/
 html:root {
-    --font-family-base: system-ui;
-    --font-size-base: 20px;
-    --line-height-base: 1.2;
+    --font-family-base: 'HelveticaNeueCyr';
+    --font-family-inter: 'Inter';
+    --font-size-s: 14px;
+    --font-size-m: 16px;
+    --font-size-l: 18px;
+    --line-height-base: 1.38;
     --font-weight-base: 400;
     --border-radius-base: 5px;
-    --letter-spacing-base: normal;
+    --letter-spacing-base: 0.03em;
 }
 
 /*font END ==============*/
@@ -29,8 +35,14 @@ html:root {
     --color-f-semi-transparrent: rgba(255, 255, 255, 0.5);
     --color-0: #000000;
     --color-f: #fff;
-    --color-accent: #000;
-    --color-text-base: #000;
+    --color-accent: #9D2C4D;
+    --color-sub-accent: #FFEEF2;
+    --color-text-base: #505050;
+    --color-yellow: #FBE310;
+    --color-blue: #0085FF;
+    --color-gray: #E3E3E3;
+    --color-gray-2: #BBBBBB;
+    --color-dark: #404041;
 }
 
 /*colors END ==============*/
@@ -59,3 +71,7 @@ html:root{
     --z-index-popup:500;
 }
 /*z-index END ==============*/
+
+.page{
+    height: 10000px;
+}

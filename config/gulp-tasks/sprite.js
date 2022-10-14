@@ -22,11 +22,7 @@ export const sprite = () => {
 				transform: [
 					{
 						svgo: {
-							plugins: [
-								{ removeXMLNS: true },
-								{ convertPathData: false },
-								{ removeViewBox: false },
-							]
+
 						}
 					}
 				]
